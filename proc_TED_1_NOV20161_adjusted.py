@@ -15,7 +15,7 @@ with open("../total-economy-database-data/TED_1_NOV20161_adjusted.csv", newline=
     reader = csv.DictReader(f)
 
     for row in reader:
-        for year in range(1950, 2018):
+        for year in range(1950, 2017):
             y = str(year)
             if row[y]:
                 if first:
