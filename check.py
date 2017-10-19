@@ -4,6 +4,11 @@ import re
 import glob
 
 
+# A quick-and-dirty script to check that for each URL, the script name matches
+# the expected value, and that for each script, the corresponding database_url
+# and CSV files are used.
+
+
 SCRIPTS = glob.glob("proc_*.py")
 
 
