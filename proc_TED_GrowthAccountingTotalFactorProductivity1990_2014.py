@@ -21,7 +21,7 @@ def do_reader(reader, metric):
                 print("    " + ("" if first else ",") + "(" + ",".join([
                     mysql_quote(row['Country']),  # region
                     mysql_int(y),  # year
-                    mysql_quote("https://www.conference-board.org/retrievefile.cfm?filename=TED_OutputLaborLabor-Productivity1950-2015.xlsx&type=subsite"),  # database_url
+                    mysql_quote("https://www.conference-board.org/retrievefile.cfm?filename=TED_GrowthAccountingTotalFactorProductivity1990-2014.xlsx&type=subsite"),  # database_url
                     mysql_quote(""),  # data_retrieval_method
                     mysql_quote(metric),  # metric
                     mysql_quote(""),  # units
