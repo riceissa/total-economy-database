@@ -39,7 +39,8 @@ def check_url(url):
 
 
 def check_csv(line, url, scriptname):
-    pass
+    csv = scriptname.replace(".py", ".csv").replace("proc_", "")
+    assert csv in line, (scriptname, csv, line)
 
 
 def check_dl_link(line, url, scriptname):
