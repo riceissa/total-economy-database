@@ -14,7 +14,7 @@ def do_reader(reader, metric):
     first = True
     for row in reader:
         for region in sorted(row):
-            if region and row[region]:
+            if region and row[region] and region != 'Year':
                 if first:
                     print(insert_line)
                 print("    " + ("" if first else ",") + "(" + ",".join([
