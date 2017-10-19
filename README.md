@@ -11,5 +11,6 @@ add it to this repo. Steps to reproduce the CSVs:
 2. Open the spreadsheet in LibreOffice.
 3. Navigate to the relevant sheet.
 4. Do "File" → "Save As…" and save as a CSV.
-5. Remove the top few lines from the CSV (which just describe the dataset) so
+5. Remove the top few lines from the CSV (which just describe the dataset) and
+   sometimes also the bottom few lines (which contain citation information) so
    that the line containing the column names is on top.
