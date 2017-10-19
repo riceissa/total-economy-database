@@ -34,7 +34,7 @@ def check_url(url):
                     check_csv(line, url, s)
                 elif "www.conference-board.org" in line:
                     check_dl_link(line, url, s)
-                elif "fps =" in line:
+                elif line.startswith("fps ="):
                     check_glob_csv(line, url, s)
 
 
@@ -48,7 +48,9 @@ def check_dl_link(line, url, scriptname):
 
 
 def check_glob_csv(line, url, scriptname):
-    pass
+    filename = url.split('=')[1].split('&')[0]
+    root = filename.split('.')[0]
+    assert root in line, (scriptname, root, line)
 
 
 if __name__ == "__main__":
