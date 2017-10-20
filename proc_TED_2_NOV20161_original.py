@@ -25,7 +25,7 @@ with open("../total-economy-database-data/TED_2_NOV20161_original.csv", newline=
                     mysql_int(y),  # year
                     mysql_quote("https://www.conference-board.org/retrievefile.cfm?filename=TED_2_NOV20161.xlsx&type=subsite"),  # database_url
                     mysql_quote(""),  # data_retrieval_method
-                    mysql_quote(row['INDICATOR']),  # metric
+                    mysql_quote(row['INDICATOR'] + " (original)"),  # metric
                     mysql_quote(row['MEASURE']),  # units
                     mysql_float(row[y]),  # value
                     mysql_quote(""),  # notes
