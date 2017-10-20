@@ -1,5 +1,9 @@
 # total-economy-database
 
+- TODO the original/adjusted versions currently have identical
+  metric/units/database URLs, so they are not distinguishable. Where might be
+  the best place to put this information?
+
 ## License
 
 CC0.
