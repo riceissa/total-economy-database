@@ -1,5 +1,12 @@
 # total-economy-database
 
+To produce the SQL file, do something like this:
+
+```bash
+rm -f out.sql  # remove file from old run in case it exists
+for file in proc_*; do ./$file >> out.sql; done
+```
+
 ## License
 
 CC0.
