@@ -9,7 +9,7 @@ from util import *
 
 
 def do_reader(reader, metric):
-    insert_line = "insert into data(region, year, database_url, data_retrieval_method, metric, units, value, notes) values"
+    insert_line = "insert into data(region, odate, database_url, data_retrieval_method, metric, units, value, notes) values"
     count = 0
     first = True
     for row in reader:
@@ -20,7 +20,7 @@ def do_reader(reader, metric):
                     print(insert_line)
                 print("    " + ("" if first else ",") + "(" + ",".join([
                     mysql_quote(row['Country / Region']),  # region
-                    mysql_int(y),  # year
+                    mysql_string_date(y),  # odate
                     mysql_quote("https://www.conference-board.org/retrievefile.cfm?filename=TED---Regional-Aggregates-1990-2016.xlsx&type=subsite"),  # database_url
                     mysql_quote(""),  # data_retrieval_method
                     mysql_quote(metric),  # metric
