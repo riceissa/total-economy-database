@@ -4,7 +4,7 @@ import csv
 import sys
 import re
 
-from util import *
+from devec_sql_common import *
 
 
 insert_line = "insert into data(region, odate, database_url, data_retrieval_method, metric, units, value, notes) values"

@@ -5,7 +5,7 @@ import sys
 import re
 import glob
 
-from util import *
+from devec_sql_common import *
 
 
 def do_reader(reader, metric):
