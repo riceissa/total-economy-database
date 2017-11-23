@@ -7,6 +7,16 @@ rm -f out.sql  # remove file from old run in case it exists
 for file in proc_*; do ./$file >> out.sql; done
 ```
 
+To generate the SQL files, the scripts in this repository require the
+[`devec_sql_common`](https://github.com/riceissa/devec_sql_common)
+Python package.  To install, run:
+
+```bash
+git clone https://github.com/riceissa/devec_sql_common
+cd devec_sql_common
+pip3 install -e .
+```
+
 ## License
 
 CC0.
