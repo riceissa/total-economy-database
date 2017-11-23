@@ -1,10 +1,10 @@
 # total-economy-database
 
-To produce the SQL file, do something like this:
+To produce the SQL file, do:
 
 ```bash
-rm -f out.sql  # remove file from old run in case it exists
-for file in proc_*; do ./$file >> out.sql; done
+make clean  # remove file from old run in case it exists
+make
 ```
 
 To generate the SQL files, the scripts in this repository require the
