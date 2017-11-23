@@ -1,6 +1,6 @@
 # total-economy-database
 
-To produce the SQL file, do:
+To produce the SQL file (`ted.sql`), do:
 
 ```bash
 make clean  # remove file from old run in case it exists
