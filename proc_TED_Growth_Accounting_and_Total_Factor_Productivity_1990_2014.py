@@ -19,7 +19,7 @@ def do_reader(reader, metric):
                 if first:
                     print(insert_line)
                 print("    " + ("" if first else ",") + "(" + ",".join([
-                    mysql_quote(row['Country']),  # region
+                    mysql_quote(region_normalized(row['Country'])),  # region
                     mysql_string_date(y),  # odate
                     mysql_quote("https://www.conference-board.org/retrievefile.cfm?filename=TED---Growth-Accounting-and-Total-Factor-Productivity-1990-2014.xlsx&type=subsite"),  # database_url
                     mysql_quote(""),  # data_retrieval_method

@@ -18,7 +18,7 @@ def do_reader(reader, metric):
                 if first:
                     print(insert_line)
                 print("    " + ("" if first else ",") + "(" + ",".join([
-                    mysql_quote(region),  # region
+                    mysql_quote(region_normalized(region)),  # region
                     mysql_string_date(row['Year']),  # odate
                     mysql_quote("https://www.conference-board.org/retrievefile.cfm?filename=Output-Labor-and-Labor-Productivity-1950-2010.xls&type=subsite"),  # database_url
                     mysql_quote(""),  # data_retrieval_method
