@@ -17,7 +17,7 @@ def do_reader(reader, metric):
             if region and row[region] and region != 'Year':
                 if first:
                     print(insert_line)
-                print("    " + ("" if first else ",") + "(" + ",".join([
+                print("    " + ("" if first else ",") + "(" + uniq_join([
                     mysql_quote(region_normalized(region)),  # region
                     mysql_string_date(row['Year']),  # odate
                     mysql_quote("https://www.conference-board.org/retrievefile.cfm?filename=Output-Labor-and-Labor-Productivity-1950-2012.xls&type=subsite"),  # database_url

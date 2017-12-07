@@ -18,7 +18,7 @@ def do_reader(reader, metric):
             if row[y]:
                 if first:
                     print(insert_line)
-                print("    " + ("" if first else ",") + "(" + ",".join([
+                print("    " + ("" if first else ",") + "(" + uniq_join([
                     mysql_quote(region_normalized(row['Country / Region'])),  # region
                     mysql_string_date(y),  # odate
                     mysql_quote("https://www.conference-board.org/retrievefile.cfm?filename=TED---Regional-Aggregates-1990-2016.xlsx&type=subsite"),  # database_url
