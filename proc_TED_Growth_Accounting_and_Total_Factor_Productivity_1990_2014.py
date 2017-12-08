@@ -7,8 +7,6 @@ import glob
 
 from devec_sql_common import *
 
-print_insert_header()
-
 
 def do_reader(reader, metric):
     insert_line = "insert into data(region, odate, database_url, data_retrieval_method, metric, units, value, notes) values"
@@ -47,6 +45,3 @@ for fp in fps:
     with open(fp, newline='') as f:
         reader = csv.DictReader(f)
         do_reader(reader, metric)
-
-
-print_insert_footer()

@@ -6,8 +6,6 @@ import re
 
 from devec_sql_common import *
 
-print_insert_header()
-
 
 insert_line = "insert into data(region, odate, database_url, data_retrieval_method, metric, units, value, notes) values"
 count = 0
@@ -40,6 +38,3 @@ with open("../total-economy-database-data/TED_2_NOV20161_adjusted.csv", newline=
                     print(";")
     if not first:
         print(";")
-
-
-print_insert_footer()
